@@ -1,0 +1,77 @@
+# Ignore virtual environment directories
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore the .env file (for environment variables)
+.env
+
+# Ignore Django migration files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+*.db
+*.pid
+*.pdf
+*.DS_Store
+*.mp4
+*.tiff
+*.svg
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore Django static files
+staticfiles/
+media/
+
+# Ignore node_modules (if using Node.js)
+node_modules/
+
+# Ignore compiled files (if using C extensions)
+*.so
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore the build directory (if using C extensions)
+build/
+dist/
+*.egg-info/
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore backup files
+*.bak
+*.swp
+*~
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs and local settings
+*.log
+local_settings.py
