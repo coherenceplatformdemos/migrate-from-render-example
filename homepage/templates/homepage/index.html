@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Hello Django on Render!</title>
+    <title>Homepage</title>
 
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -15,14 +15,31 @@
 </head>
 <body>
 <header class="container mt-4 mb-4">
-    <a href="https://render.com">        
-        <img src="{% static "homepage/render-banner.png" %}" alt="Homepage banner" class="mw-100">    
+    <a href="https://render.com">
+        <img src="{% static 'homepage/render-banner.png' %}" alt="Homepage banner" class="mw-100">
     </a>
 </header>
 <main class="container">
     <div class="row text-center justify-content-center">
         <div class="col">
-            <h1 class="display-4">Hello World!</h1>
+            <h1 class="display-4">Products</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul class="list-group">
+                {% for product in products %}
+                    <li class="list-group-item">
+                        <h5>{{ product.name }}</h5>
+                        <p>{{ product.description }}</p>
+                        <p>Price: ${{ product.price }}</p>
+                        <p>Created at: {{ product.created_at }}</p>
+                        <p>Updated at: {{ product.updated_at }}</p>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No products available.</li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </main>
