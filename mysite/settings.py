@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'os.environ.get('CNC_ENVIRONMENT_DOMAIN'),'
+    'os.environ.get('CNC_ENVIRONMENT_DOMAIN')',
 ]
 
 CSRF_TRUSTED_ORIGINS = [f"https://{os.environ.get('CNC_ENVIRONMENT_DOMAIN')}"]
